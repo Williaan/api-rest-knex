@@ -25,7 +25,7 @@ const obterUser = async (request, response) => {
         return response.status(200).json(user)
 
     } catch (error) {
-        CCC
+       return response.status(400).json({ mensagem: `Erro interno: ${error.message}` });
     }
 
 }
